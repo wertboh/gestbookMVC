@@ -1,0 +1,36 @@
+$(document).ready(function () {
+    $("form").submit(
+        function () {
+            registerAjax("loginresult_form", "login_form", "login/login");
+            return false;
+        });
+});
+
+function registerAjax(loginresult_form, login_form, url) {
+    $.ajax({
+            url: url,
+            type: "POST",
+            dataType: "html",
+            data: $("#" + login_form).serialize(),
+            success: function (response) {
+                response = JSON.parse(response)
+                alert(response)
+                if (response.check_email_In_BD === false) {
+                    $("#email_message").html("Error. This email isn`t exist");
+                }
+                if (response.check_pass_In_BD === false) {
+                    $("#pass_message").html("Error. This pass isn`t exist");
+                }
+                if (response.check_email_In_BD === true && response.check_pass_In_BD === true) {
+                    document.location.replace("http://gestbookmvc/reply");
+                }
+            },
+            error: function (response) {
+                alert("error");
+                $("#loginresult_form").html("Error. Your data has not been sent.");
+            }
+        }
+    );
+}
+
+
