@@ -15,6 +15,10 @@ class Controller
         $this->model = new $name_model();
     }
 
+    function getView()
+    {
+    }
+
     function submitInfo()
     {
     }

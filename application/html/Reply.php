@@ -54,8 +54,8 @@
     </style>
 </head>
 <body>
-<form action="htmlReply.php" method="post">
-    <a href="logout.php" class="my-button">
+<form action="reply" method="post">
+    <a href="logout" class="my-button">
         <center>Log out</center>
     </a>
     <center>

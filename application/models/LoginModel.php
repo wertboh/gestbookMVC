@@ -7,11 +7,6 @@ use PDO;
 
 class LoginModel
 {
-    public function SessionStart()
-    {
-        session_start();
-    }
-
     public function base()
     {
         $pdo = new PDO('mysql:dbname=registeruser;host=127.0.0.1', 'root', 'root');
@@ -27,8 +22,8 @@ class LoginModel
         return $data;
     }
 
-    function CheckEmail($informationAboutUser) {
-        if (isset($data[0]['email'])) {
+    function CheckEmail($informationAboutUser, $email) {
+        if (isset($informationAboutUser[0]['email']) == $email) {
             $check_email_In_BD =  true;
         }
         else $check_email_In_BD = false;
@@ -41,7 +36,7 @@ class LoginModel
         return $hesh;
     }
 
-    function CheckPass($informationAboutUser,$pass, $hesh){
+    function CheckPass($pass, $hesh){
         if(password_verify($pass, $hesh))  $check_pass_In_BD = true;
         else $check_pass_In_BD = false;
         return $check_pass_In_BD;

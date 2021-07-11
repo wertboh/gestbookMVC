@@ -64,7 +64,7 @@
     </center>
 </form>
 <div id="loginresult_form"></div>
-<script src="ajaxLogin"></script>
+<script src="ajax/ajaxLogin"></script>
 </body>
 </html>
 

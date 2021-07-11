@@ -21,15 +21,14 @@ class RegisterModel
 
     public function CheckDublicationLogin($pdo, $login)
     {
-        $stmt1 = $pdo->prepare('SELECT * FROM user WHERE login = :login');
-        $stmt1->bindParam(':login', $login);
-        $stmt1->execute();
-        $check_dublication_login = $stmt1->rowCount();
+        $stmt = $pdo->prepare('SELECT * FROM user WHERE login = :login');
+        $stmt->bindParam(':login', $login);
+        $stmt->execute();
+        $check_dublication_login = $stmt->rowCount();
 
         if ($check_dublication_login > 0) {
-            $dublication_login_login = true;
-        }
-        else $dublication_login = false;
+            $dublication_login = true;
+        } else $dublication_login = false;
         return $dublication_login;
     }
 

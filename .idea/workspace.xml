@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="870956f7-712b-44d0-ba59-c3d51ed5a801" name="Default Changelist" comment="" />
+    <list default="true" id="870956f7-712b-44d0-ba59-c3d51ed5a801" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/LogoutController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/core/DataBase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/view/LogoutView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/h4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maincss.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/ajaxLogin" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/ajaxLogin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/LogoutModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/ReplyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/html/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/html/Login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/html/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/html/Reply.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/LoginModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/LoginModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/RegisterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/RegisterModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/ReplyModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/ReplyModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/LoginView.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/LoginView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/ReplyView.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/ReplyView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +40,11 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1uZiRrsFG9EeJ4NqsNCHsZUqUkq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -26,7 +52,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gestbookOOP" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -37,10 +63,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\work\OpenServer\domains\gestbookMVC\application\models" />
       <recent name="C:\work\OpenServer\domains\gestbookMVC\application\controllers" />
       <recent name="C:\work\OpenServer\domains\gestbookMVC\ewrwer" />
       <recent name="C:\work\OpenServer\domains\gestbookMVC\application\core" />
-      <recent name="C:\work\OpenServer\domains\gestbookMVC\application\models" />
       <recent name="C:\work\OpenServer\domains\gestbookMVC\application" />
     </key>
   </component>
@@ -54,7 +80,10 @@
       <updated>1624879507343</updated>
       <workItem from="1624879508702" duration="69924000" />
       <workItem from="1625146737652" duration="90850000" />
-      <workItem from="1625727197551" duration="12887000" />
+      <workItem from="1625727197551" duration="52998000" />
+      <workItem from="1625990835139" duration="10536000" />
+      <workItem from="1626009675582" duration="2520000" />
+      <workItem from="1626015954171" duration="8038000" />
     </task>
     <servers />
   </component>
@@ -78,26 +107,42 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1625143768970" />
-    <state x="463" y="110" key="FileChooserDialogImpl" timestamp="1625682933400">
+    <state x="463" y="110" key="FileChooserDialogImpl" timestamp="1625993777594">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="110" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1625682933400" />
+    <state x="463" y="110" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1625993777594" />
+    <state x="551" y="267" key="Github.ShareDialog" timestamp="1625742186092">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="551" y="267" key="Github.ShareDialog/0.0.1366.738@0.0.1366.738" timestamp="1625742186092" />
+    <state x="483" y="74" key="Github.UntrackedFilesDialog" timestamp="1625742205198">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="483" y="74" key="Github.UntrackedFilesDialog/0.0.1366.738@0.0.1366.738" timestamp="1625742205198" />
     <state x="429" y="92" key="NewPhpClassDialog" timestamp="1625221619532">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="429" y="92" key="NewPhpClassDialog/0.0.1366.738@0.0.1366.738" timestamp="1625221619532" />
-    <state x="517" y="292" key="NewPhpFileDialog" timestamp="1625485837533">
+    <state x="517" y="292" key="NewPhpFileDialog" timestamp="1625825029974">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1625485837533" />
+    <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1625825029974" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1625742270857">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1625742270857" />
+    <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626012984089">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1626012984089" />
     <state x="0" y="41" width="1078" height="672" key="dock-window-1" timestamp="1625668537284">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="0" y="41" width="1078" height="672" key="dock-window-1/0.0.1366.738@0.0.1366.738" timestamp="1625668537284" />
-    <state x="390" y="102" width="585" height="534" key="find.popup" timestamp="1625655209803">
+    <state x="390" y="102" width="585" height="534" key="find.popup" timestamp="1625992264018">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="390" y="102" width="585" height="534" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1625655209803" />
+    <state x="390" y="102" width="585" height="534" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1625992264018" />
     <state x="339" y="165" key="run.anything.popup" timestamp="1625482986078">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

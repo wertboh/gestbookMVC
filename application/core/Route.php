@@ -25,9 +25,17 @@ class Route
             'controllers' => 'login',
             'action' => 'submitInfo'
         ],
+//        'login/id' =>[
+//          'controllers' => 'login',
+//          'action' => 'SessionStart'
+//        ],
         'reply' => [
             'controllers' => 'reply',
             'action' => 'getView'
+        ],
+        'reply/checksession' =>[
+          'controllers' => 'reply',
+          'action' => 'SessionStart'
         ],
         'reply/submit_comment' => [
             'controllers' => 'reply',
@@ -40,6 +48,10 @@ class Route
         'reply/id' =>[
             'controllers' => 'reply',
             'action' => 'sessionStart'
+        ],
+        'logout' => [
+            'controllers' => 'logout',
+            'action' => 'getLogout'
         ]
     ];
 

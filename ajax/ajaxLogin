@@ -18,8 +18,8 @@ function registerAjax(loginresult_form, login_form, url) {
                 if (response.check_email_In_BD === false) {
                     $("#email_message").html("Error. This email isn`t exist");
                 }
-                if (response.check_pass_In_BD === false) {
-                    $("#pass_message").html("Error. This pass isn`t exist");
+                if (response.check_pass_In_BD === false && response.check_email_In_BD === true) {
+                    $("#pass_message").html("Error. Check your pass");
                 }
                 if (response.check_email_In_BD === true && response.check_pass_In_BD === true) {
                     document.location.replace("http://gestbookmvc/reply");
