@@ -7,7 +7,7 @@ use PDO;
 class ReplyModel
 {
 
-public $indent = 10;
+public $array = [];
     function VerificationAuthorization()
     {
         session_start();
@@ -74,7 +74,7 @@ public $indent = 10;
         }
     }
 
-    public function Replies($information_about_user, $comment,$pdo)
+    public function Replies($information_about_user, $comment,$pdo, $array)
     {
         $stmt2 = $pdo->prepare('SELECT * FROM comment WHERE  id_maternal = :id_comment');
         $stmt2->bindParam(':id_comment', $comment['id_comment']);
@@ -84,15 +84,19 @@ public $indent = 10;
         $this->InsertReplies($comment['id_comment'], $information_about_user,  $pdo);
 
         foreach ($replies as $item) {
-            $this->Replies($information_about_user, $item, $pdo);
+            $array = [$item];
+            $this->Replies($information_about_user, $item, $pdo, $array);
         }
+        return $array;
     }
 
-    public function PrintChildren($getChildren, $information_about_user, $pdo)
+    public function PrintChildren($getChildren, $information_about_user, $pdo, $array)
     {
         foreach ($getChildren as $key => $GETchildren) {
-            $this->Replies( $information_about_user, $GETchildren, $pdo);
+            $array = [$GETchildren];
+            $this->Replies( $information_about_user, $GETchildren, $pdo, $array);
         }
+        return $array;
     }
 }
 

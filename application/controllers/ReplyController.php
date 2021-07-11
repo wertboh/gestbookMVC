@@ -16,9 +16,17 @@ class ReplyController extends Controller
         foreach ($getChildren as $value) {
             $this->view->getComment($value);
         }
-        if (isset($_POST['submitbtn'])) {
-//            $this->getInfo();
-        }
+
+        $pdo = $this->model->base();
+        $information_about_user = $this->model->getInfoAboutUser($pdo);
+        $replies = $this->model->Replies($information_about_user, $value, $pdo);
+        var_dump($replies);
+    foreach ($replies as $reply) {var_dump($reply);
+    $this->view->getReplies($reply);
+}
+//        if (isset($_POST['submitbtn'])) {
+////            $this->getInfo();
+//        }
         return $getChildren;
     }
 

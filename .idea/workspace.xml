@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="870956f7-712b-44d0-ba59-c3d51ed5a801" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/LogoutController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/core/DataBase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/view/LogoutView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/h4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maincss.css" afterDir="false" />
+    <list default="true" id="870956f7-712b-44d0-ba59-c3d51ed5a801" name="Default Changelist" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ajax/ajaxLogin" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/ajaxLogin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/LogoutModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/ReplyController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/core/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/core/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/Route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/html/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/html/Login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/html/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/html/Reply.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/LoginModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/LoginModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/RegisterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/RegisterModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/ReplyModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/ReplyModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/view/LoginView.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/LoginView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/GetComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/GetComment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/ReplyView.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/ReplyView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,12 +86,35 @@
       <workItem from="1625727197551" duration="52998000" />
       <workItem from="1625990835139" duration="10536000" />
       <workItem from="1626009675582" duration="2520000" />
-      <workItem from="1626015954171" duration="8038000" />
+      <workItem from="1626015954171" duration="10974000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1626024443865</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1626024443865</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1625232614518">
@@ -127,10 +153,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1625825029974" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1625742270857">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1626024444128">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1625742270857" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1626024444128" />
     <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626012984089">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

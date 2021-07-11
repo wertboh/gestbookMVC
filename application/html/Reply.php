@@ -69,9 +69,5 @@
 
     </center>
 </form>
-<br>
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-
 </body>
 </html>

@@ -19,5 +19,13 @@ class ReplyView extends View
         ob_start();
         include 'application/view/GetComment.php';
         $value = ob_get_contents();
+
+    }
+    public  function getReplies($reply) {
+        var_dump($reply);
+        extract($reply);
+        ob_start();
+        include 'application/view/GetComment.php';
+        $reply = ob_get_contents();
     }
 }
