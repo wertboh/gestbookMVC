@@ -25,29 +25,13 @@ class Route
             'controllers' => 'login',
             'action' => 'submitInfo'
         ],
-//        'login/id' =>[
-//          'controllers' => 'login',
-//          'action' => 'SessionStart'
-//        ],
         'reply' => [
             'controllers' => 'reply',
             'action' => 'getView'
         ],
-        'reply/checksession' =>[
-          'controllers' => 'reply',
-          'action' => 'SessionStart'
-        ],
-        'reply/submit_comment' => [
-            'controllers' => 'reply',
-            'action' => 'submitComment'
-        ],
         'reply/reply' => [
             'controllers' => 'reply',
-            'action' => 'getInfo'
-        ],
-        'reply/id' =>[
-            'controllers' => 'reply',
-            'action' => 'sessionStart'
+            'action' => 'getComment'
         ],
         'logout' => [
             'controllers' => 'logout',
@@ -57,7 +41,11 @@ class Route
 
     static function start()
     {
+        if (preg_match('#/reply+\?+reply+=+[a-z 0-9!?.,]+&+[0-9]+=+Submit#', $_SERVER['REQUEST_URI'])) {
+            $path = 'reply/reply';
+        }
         $uri = explode('/', $_SERVER['REQUEST_URI']);
+
         if (!empty($uri[1])) {
             $path = $uri[1];
         }
@@ -65,6 +53,7 @@ class Route
         if (!empty($uri[2])) {
             $path = $uri[1] . '/' . $uri[2];
         }
+
         return $path;
     }
 

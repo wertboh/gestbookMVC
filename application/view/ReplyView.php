@@ -2,9 +2,7 @@
 
 namespace application\view;
 
-use application\controllers\ReplyController;
 use application\core\View;
-use application\models\ReplyModel;
 
 class ReplyView extends View
 {

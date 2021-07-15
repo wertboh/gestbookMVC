@@ -1,5 +1,5 @@
 <?php
-$indent = 10;
+
 echo '<div class="accordion" id="accordionExample">
     <div class="accordion-item">';
 echo '<br><div style="margin-left:' . $indent . ';"><big>' . $firstname . ' ' . $lastname . '</big>' . ' ' . '<small>' . $date . '</small></div>'
@@ -14,7 +14,7 @@ echo '<div id="collapse' . $id_comment . '" class="accordion-collapse collapse" 
       <form action="" method="get"><textarea rows="4" required cols="45" name="reply" placeholder="Write you comment.." style="margin-left:' . $indent .
     '"></textarea><br>';
 
-echo '<input type="Submit" value="Submit" name="' . $id_comment . '" style="margin-left:' . $indent . '">
+echo '<input type="button" value="Submit" id="' . $id_comment . '" name="' . $id_comment . '" style="margin-left:' . $indent . '">
 <input type="reset" value="Reset" name="' . $id_comment . '"></form>';
 echo '</div>
     </div>';

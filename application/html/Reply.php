@@ -30,7 +30,7 @@
             margin-bottom: 100px;
         }
 
-        input[type=submit], input[type=reset] {
+        input[type=button], input[type=reset] {
             background-color: #20B2AA;
             color: white;
             padding: 4px 16px;
@@ -64,7 +64,7 @@
                 <textarea rows="4" required cols="45" name="comments" placeholder="Write you comment.."
                           style="resize: none;"></textarea>
         </label><br>
-        <input type="submit" name="submitbtn" id="button_reply">
+        <input type="button" name="submitbtn" id="button_reply" value="Submit">
         <input type="reset" value="Reset"><br>
 
     </center>

@@ -1,28 +1,23 @@
 <?php
-//session_start();
-//$date = date("d-m-Y, h:i:s");
-//$indent = 10;
+
 namespace application\models;
 use PDO;
 class ReplyModel
 {
 
 public $array = [];
+public $indent = 10;
     function VerificationAuthorization()
     {
         session_start();
+        if(!empty($_POST)) {
+            header('Location:reply');
+        }
         if ($_SESSION['id_user'] == NULL) {
             header('Location: login');
             die();
         }
     }
-//
-//    function removeRefresh($comment, $reply)
-//    {
-//        if (!empty($comment) || !empty($reply)) {
-//            header("Location: http://gestbookoop/reply.php");
-//        }
-//    }
 
     public function base()
     {
@@ -75,10 +70,10 @@ public $array = [];
         }
     }
 
-    public function Replies($information_about_user, $comment,$pdo, $count)
-    {$count++;
+    public function Replies($information_about_user, $comment,$pdo, $indent)
+    {
         $this->array[] = ['firstname' => $comment['firstname'], 'lastname' => $comment['lastname'], 'comments' =>
-            $comment['comments'], 'data' => $comment['date']];
+            $comment['comments'], 'data' => $comment['date'], 'id_comment' => $comment['id_comment'], 'indent' => $indent];
 
         $stmt2 = $pdo->prepare('SELECT * FROM comment WHERE  id_maternal = :id_comment');
         $stmt2->bindParam(':id_comment', $comment['id_comment']);
@@ -88,21 +83,19 @@ public $array = [];
         $this->InsertReplies($comment['id_comment'], $information_about_user,  $pdo);
 
         foreach ($replies as $item) {
-            $this->Replies($information_about_user, $item, $pdo, $count);
-            $count++;
+            $this->Replies($information_about_user, $item, $pdo, $indent +40);
         }
 
         return $this->array;
     }
     public function getComment() {
-        var_dump($this->array);
         return $this->array;
     }
 
-    public function PrintChildren($getChildren, $information_about_user, $pdo, $count)
+    public function PrintChildren($getChildren, $information_about_user, $pdo, $indent)
     {
         foreach ($getChildren as $key => $GETchildren) {
-            $this->Replies( $information_about_user, $GETchildren, $pdo, 0);
+            $this->Replies( $information_about_user, $GETchildren, $pdo, $indent);
         }
     }
 }

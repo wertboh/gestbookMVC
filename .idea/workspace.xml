@@ -19,10 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="870956f7-712b-44d0-ba59-c3d51ed5a801" name="Default Changelist" comment="главные комменты гуд">
+    <list default="true" id="870956f7-712b-44d0-ba59-c3d51ed5a801" name="Default Changelist" comment="работает вывод комментов">
+      <change afterPath="$PROJECT_DIR$/ajax/ajaxReply.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ajax/ajaxLogin" beforeDir="false" afterPath="$PROJECT_DIR$/ajax/ajaxLogin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/ReplyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/ReplyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/Route.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/html/Reply.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/html/Reply.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/ReplyModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/ReplyModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/view/GetComment.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/GetComment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/view/ReplyView.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/view/ReplyView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +43,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="composer.json" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -53,7 +59,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gestbookOOP" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../proverkagestbook" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,7 +93,7 @@
       <workItem from="1626015954171" duration="12996000" />
       <workItem from="1626071777884" duration="13600000" />
       <workItem from="1626244952368" duration="9148000" />
-      <workItem from="1626334952076" duration="2584000" />
+      <workItem from="1626334952076" duration="10189000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1626024443865</created>
@@ -103,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626027433624</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="работает вывод комментов">
+      <created>1626338022954</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626338022955</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
     <MESSAGE value="главные комменты гуд" />
-    <option name="LAST_COMMIT_MESSAGE" value="главные комменты гуд" />
+    <MESSAGE value="работает вывод комментов" />
+    <option name="LAST_COMMIT_MESSAGE" value="работает вывод комментов" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="47" key="#Inspections" timestamp="1625232614518">
@@ -143,10 +157,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738@0.0.1366.738" timestamp="1625143768970" />
-    <state x="463" y="110" key="FileChooserDialogImpl" timestamp="1626335306191">
+    <state x="463" y="110" key="FileChooserDialogImpl" timestamp="1626341469577">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="463" y="110" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1626335306191" />
+    <state x="463" y="110" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1626341469577" />
     <state x="551" y="267" key="Github.ShareDialog" timestamp="1625742186092">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
@@ -163,10 +177,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738@0.0.1366.738" timestamp="1625825029974" />
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1626027439929">
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2" timestamp="1626338028458">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1626027439929" />
+    <state x="275" y="102" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1626338028458" />
     <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626012984089">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

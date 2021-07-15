@@ -14,7 +14,6 @@ function registerAjax(loginresult_form, login_form, url) {
             data: $("#" + login_form).serialize(),
             success: function (response) {
                 response = JSON.parse(response)
-                alert(response)
                 if (response.check_email_In_BD === false) {
                     $("#email_message").html("Error. This email isn`t exist");
                 }
