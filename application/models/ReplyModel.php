@@ -51,7 +51,7 @@ public $array = [];
 
      public function InsertComments($comment, $information_about_user, $pdo)
     {
-        $date = date("d-m-Y, h:i:s");
+        $date = date("Y-m-d H:i:s");
         $statement2 = $pdo->prepare('INSERT INTO comment (comments, date, firstname,lastname)VALUE(:comments, :date, :firstname, :lastname)');
         $statement2->bindParam(':comments', $comment);
         $statement2->bindParam(':date', $date);
@@ -64,9 +64,10 @@ public $array = [];
     public function InsertReplies($nameButtom, $information_about_user, $pdo)
     {
         if (isset($_GET[$nameButtom])) {
+            $date = date("Y-m-d H:i:s");
             $statement1 = $pdo->prepare('INSERT INTO comment (comments, date, firstname,lastname, id_maternal)VALUE(:comments, :date, :firstname, :lastname, :id_maternal)');
             $statement1->bindParam(':comments', $_GET['reply']);
-//            $statement1->bindParam(':date', $date);
+            $statement1->bindParam(':date', $date);
             $statement1->bindParam(':firstname', $information_about_user[0]['firstname']);
             $statement1->bindParam(':lastname', $information_about_user[0]['lastname']);
             $statement1->bindParam(':id_maternal', $nameButtom);
@@ -74,29 +75,35 @@ public $array = [];
         }
     }
 
-    public function Replies($information_about_user, $comment,$pdo, $array)
-    {
+    public function Replies($information_about_user, $comment,$pdo, $count)
+    {$count++;
+        $this->array[] = ['firstname' => $comment['firstname'], 'lastname' => $comment['lastname'], 'comments' =>
+            $comment['comments'], 'data' => $comment['date']];
+
         $stmt2 = $pdo->prepare('SELECT * FROM comment WHERE  id_maternal = :id_comment');
         $stmt2->bindParam(':id_comment', $comment['id_comment']);
         $stmt2->execute();
         $replies = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-//        echo $comment['comments'];
+
         $this->InsertReplies($comment['id_comment'], $information_about_user,  $pdo);
 
         foreach ($replies as $item) {
-            $array = [$item];
-            $this->Replies($information_about_user, $item, $pdo, $array);
+            $this->Replies($information_about_user, $item, $pdo, $count);
+            $count++;
         }
-        return $array;
+
+        return $this->array;
+    }
+    public function getComment() {
+        var_dump($this->array);
+        return $this->array;
     }
 
-    public function PrintChildren($getChildren, $information_about_user, $pdo, $array)
+    public function PrintChildren($getChildren, $information_about_user, $pdo, $count)
     {
         foreach ($getChildren as $key => $GETchildren) {
-            $array = [$GETchildren];
-            $this->Replies( $information_about_user, $GETchildren, $pdo, $array);
+            $this->Replies( $information_about_user, $GETchildren, $pdo, 0);
         }
-        return $array;
     }
 }
 

@@ -11,23 +11,41 @@ class ReplyController extends Controller
 
     function getView()
     {
-        $getChildren = $this->model->GetChildren();
+//        $getChildren = $this->model->GetChildren();
         $this->view->generate();
-        foreach ($getChildren as $value) {
+
+//        foreach ($getChildren as $value) {
+//            $this->view->getComment($value);
+//        }
+//        $pdo = $this->model->base();
+//        $information_about_user = $this->model->getInfoAboutUser($pdo);
+//        $this->model->PrintChildren($getChildren, $information_about_user, $pdo, 0);
+
+//        $array = $this->model->getComment();
+
+
+//        foreach ($array as $value) {
+//            $this->view->getComment($value);
+//        }
+//
+//        if (isset($_POST['submitbtn'])) {
+//            $this->getInfo();
+//        }
+        $this->getComment();
+    }
+    function getComment() {
+        $pdo = $this->model->base();
+        $getChildren = $this->model->GetChildren($pdo);
+        $information_about_user = $this->model->getInfoAboutUser($pdo);
+        $this->model->PrintChildren($getChildren, $information_about_user, $pdo, 0);
+        $array = $this->model->getComment();
+        foreach ($array as $value) {
             $this->view->getComment($value);
         }
 
-        $pdo = $this->model->base();
-        $information_about_user = $this->model->getInfoAboutUser($pdo);
-        $replies = $this->model->Replies($information_about_user, $value, $pdo);
-        var_dump($replies);
-    foreach ($replies as $reply) {var_dump($reply);
-    $this->view->getReplies($reply);
-}
-//        if (isset($_POST['submitbtn'])) {
-////            $this->getInfo();
-//        }
-        return $getChildren;
+        if (isset($_POST['submitbtn'])) {
+            $this->getInfo();
+        }
     }
 
     function getInfo()
@@ -35,6 +53,7 @@ class ReplyController extends Controller
         $pdo = $this->model->base();
         $information_about_user = $this->model->getInfoAboutUser($pdo);
         $this->submitReply($information_about_user, $pdo);
+
         return $information_about_user;
     }
 
@@ -45,6 +64,6 @@ class ReplyController extends Controller
 
     function submitComment($getChildren, $information_about_user, $pdo)
     {
-        $this->model->PrintChildren($getChildren, $information_about_user, $pdo);
+        $this->model->PrintChildren($getChildren, $information_about_user, $pdo, 0);
     }
 }
